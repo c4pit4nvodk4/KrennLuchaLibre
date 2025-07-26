@@ -3,6 +3,7 @@
 </p>
 
 ¿Quieres visitar la página?
+
 <a href="https://c4pit4nvodk4.github.io/KrennLuchaLibre/" target="_blank"><b>¡👉🏻 CLICK AQUÍ 👈🏻!</b></a>
 
 Krenn Lucha Libre - Sistema de Cartas Coleccionables es una plataforma digital innovadora que permite a los fanáticos de la lucha libre coleccionar cartas digitales con momentos épicos y memorables de los gladiadores de Krenn.
