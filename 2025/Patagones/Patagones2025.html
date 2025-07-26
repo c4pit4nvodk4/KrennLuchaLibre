@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acceso Seguro - Galería Exclusiva</title>
+    <title>Krenn Lucha Libre - Patagones 2025</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -253,13 +253,13 @@
     <div class="container">
         <header>
             <div class="banner">
-                <h1>Galería Exclusiva de Patagones</h1>
+                <h1>Krenn Lucha Libre - Patagones 2025</h1>
             </div>
         </header>
-        
+        <img src="https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/Patagones/Patagones2025.webp" alt="Patagones 2025" style="width: 100%; height: auto;">
         <main>
             <section class="login-section">
-                <h2><i class="fas fa-lock"></i> Acceso Seguro</h2>
+                <h2><i class="fas fa-lock"></i> Coloca La contraseña del reverso de la carta</h2>
                 <div class="message error" id="errorMessage">Credenciales incorrectas. Intente nuevamente.</div>
                 <div class="input-group">
                     <label for="username">Usuario:</label>
@@ -273,9 +273,9 @@
             </section>
             
             <section class="gallery-section">
-                <h2><i class="fas fa-images"></i> Colección Exclusiva</h2>
+                <h2><i class="fas fa-images"></i> Accede a Patagones 2025</h2>
                 <div class="banner" style="margin-bottom: 40px;">
-                    <h1>Imágenes Premium</h1>
+                    <h1>Completa Tu Colección</h1>
                 </div>
                 
                 <div class="grid-container" id="galleryGrid">
@@ -301,10 +301,10 @@
 
         // Galería de imágenes
         const galleryImages = [
-            { id: 1, name: "Montañas", color: "https://images.unsplash.com/photo-1549880338-65ddcdfd017b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=720&w=720", bw: "https://images.unsplash.com/photo-1549880338-65ddcdfd017b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=720&w=720&grayscale" },
-            { id: 2, name: "Glaciar", color: "https://images.unsplash.com/photo-1519681393784-d120267933ba?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=720&w=720", bw: "https://images.unsplash.com/photo-1519681393784-d120267933ba?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=720&w=720&grayscale" },
-            { id: 3, name: "Bosque", color: "https://images.unsplash.com/photo-1448375240586-882707db888b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=720&w=720", bw: "https://images.unsplash.com/photo-1448375240586-882707db888b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=720&w=720&grayscale" },
-            { id: 4, name: "Lago", color: "https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=720&w=720", bw: "https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=720&w=720&grayscale" },
+            { id: 1, name: "CHEFE", color: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/Patagones/Patagones2025#1.png", bw: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/Patagones/Patagones2025#1.png" },
+            { id: 2, name: "AK", color: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/Patagones/Patagones2025#2.png", bw: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/Patagones/Patagones2025#2.png" },
+            { id: 3, name: "ROCK AND ROLL", color: "https://images.unsplash.com/photo-1448375240586-882707db888b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=720&w=720", bw: "https://images.unsplash.com/photo-1448375240586-882707db888b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=720&w=720&grayscale" },
+            { id: 4, name: "NAJASH X el otro chico que se me olvido el nombre", color: "https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=720&w=720", bw: "https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=720&w=720&grayscale" },
             { id: 5, name: "Cascada", color: "https://images.unsplash.com/photo-1505852679233-d9fd70aff56d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=720&w=720", bw: "https://images.unsplash.com/photo-1505852679233-d9fd70aff56d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=720&w=720&grayscale" },
             { id: 6, name: "Desierto", color: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=720&w=720", bw: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=720&w=720&grayscale" },
             { id: 7, name: "Aurora", color: "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=720&w=720", bw: "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=720&w=720&grayscale" },
