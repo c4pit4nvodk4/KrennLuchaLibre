@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krenn Lucha Libre - Carretera Austral 2025</title>
+          <link href="https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/KaruKinka/KaruKinka2025.webp" rel="icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin: 20px 0 40px;
+        }
+        
+        .banner {
+            width: 1280px;
+            height: 60px;
+            background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+            margin: 0 auto;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        .banner h1 {
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: linear-gradient(to right, #ff8a00, #da1b60);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .login-section {
+            background: rgba(0, 0, 0, 0.7);
+            width: 400px;
+            margin: 0 auto 50px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .login-section h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #e0e0ff;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #a0a0d0;
+            font-size: 14px;
+        }
+        
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid #444;
+            background: rgba(30, 30, 50, 0.8);
+            color: white;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .input-group input:focus {
+            outline: none;
+            border-color: #6a5af9;
+            box-shadow: 0 0 0 3px rgba(106, 90, 249, 0.3);
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            background: linear-gradient(to right, #6a5af9, #d66efd);
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn:hover {
+            background: linear-gradient(to right, #5a4af0, #c65ef5);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .gallery-section {
+            margin: 40px 0;
+        }
+        
+        .gallery-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #e0e0ff;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 24px;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        
+        .grid-item {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
+        
+        .grid-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .image-container {
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: filter 0.5s ease;
+        }
+        
+        .image-container.bw img {
+            filter: grayscale(100%) contrast(120%);
+        }
+        
+        .grid-item button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(to right, #4a6cf7, #3a9efd);
+            border: none;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .grid-item button:hover {
+            background: linear-gradient(to right, #3a5cf7, #2a8efd);
+        }
+        
+        .grid-item button:disabled {
+            background: linear-gradient(to right, #2ecc71, #27ae60);
+            cursor: not-allowed;
+        }
+        
+        .grid-item button:disabled::after {
+            content: " \2713";
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+        }
+        
+        .message {
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 10px 0;
+            display: none;
+        }
+        
+        .error {
+            background: rgba(231, 76, 60, 0.3);
+            border: 1px solid #e74c3c;
+        }
+        
+        .success {
+            background: rgba(46, 204, 113, 0.3);
+            border: 1px solid #2ecc71;
+        }
+        
+        @media (max-width: 1200px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .login-section {
+                width: 90%;
+            }
+            
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .banner {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="banner">
+                <h1>Krenn Lucha Libre - Carretera Austral 2025</h1>
+            </div>
+        </header>
+        <img src="https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/CarreteraAustral/CarreteraAustral2025.webp" alt="Carretera 2025" style="width: 100%; height: auto;">
+        <main>
+            <section class="login-section">
+                <h2><i class="fas fa-lock"></i> Coloca La contraseña del reverso de la carta</h2>
+                <div class="message error" id="errorMessage">Credenciales incorrectas. Intente nuevamente.</div>
+                <div class="input-group">
+                    <label for="username">Usuario:</label>
+                    <input type="text" id="username" placeholder="Ingrese su usuario" autocomplete="off">
+                </div>
+                <div class="input-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" placeholder="Ingrese su contraseña">
+                </div>
+                <button class="btn" id="loginBtn">Ingresar</button>
+            </section>
+            
+            <section class="gallery-section">
+                <h2><i class="fas fa-images"></i> Accede a Carretera Austral 2025</h2>
+                <div class="banner" style="margin-bottom: 40px;">
+                    <h1>Completa Tu Colección</h1>
+                </div>
+                
+                <div class="grid-container" id="galleryGrid">
+                    <!-- Las imágenes se generarán con JavaScript -->
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Sistema de Acceso Seguro &copy; 2023 - Todos los derechos reservados</p>
+        </footer>
+    </div>
+
+    <script>
+        // Credenciales válidas (generadas de forma segura)
+        const validCredentials = [
+            { user: "A5b9C2d8E1", password: "X7y3Z6w4R9" },
+            { user: "B3c8D1e9F4", password: "Y2z5X8v7W0" },
+            { user: "K9j8L7m6N5", password: "P4o3I2u1Yt" },
+            { user: "Q1w2E3r4T5", password: "U6i7O8p9A0" },
+            { user: "S0d9F8g7H6", password: "J5k4L3m2N1" }
+        ];
+
+        // Galería de imágenes
+const galleryImages = [
+    { id: 1, name: "GUACHOON", color: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/CarreteraAustral/CarreteraAustral20251.png", bw: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/CarreteraAustral/CarreteraAustral20251.png" },
+    { id: 2, name: "NAJASH", color: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/CarreteraAustral/CarreteraAustral20252.png", bw: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/CarreteraAustral/CarreteraAustral20252.png" },
+    { id: 3, name: "ROCK AND ROLL", color: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/CarreteraAustral/CarreteraAustral20253.png", bw: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/CarreteraAustral/CarreteraAustral20253.png" },
+    { id: 4, name: "NAJASH X el otro chico que se me olvido el nombre", color: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/CarreteraAustral/CarreteraAustral20254.png", bw: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/CarreteraAustral/CarreteraAustral20254.png" },
+    { id: 5, name: "Cascada", color: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/CarreteraAustral/CarreteraAustral20255.png", bw: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/CarreteraAustral/CarreteraAustral20255.png" },
+    { id: 6, name: "Desierto", color: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/CarreteraAustral/CarreteraAustral20256.png", bw: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/CarreteraAustral/CarreteraAustral20256.png" },
+    { id: 7, name: "Aurora", color: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/CarreteraAustral/CarreteraAustral20257.png", bw: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/CarreteraAustral/CarreteraAustral20257.png" },
+    { id: 8, name: "Volcán", color: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/CarreteraAustral/CarreteraAustral20258.png", bw: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/CarreteraAustral/CarreteraAustral20258.png" },
+    { id: 9, name: "Costa", color: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/CarreteraAustral/CarreteraAustral20259.png", bw: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/CarreteraAustral/CarreteraAustral20259.png" },
+    { id: 10, name: "Estrellas", color: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/CarreteraAustral/CarreteraAustral202510.png", bw: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/CarreteraAustral/CarreteraAustral202510.png" },
+    { id: 11, name: "Cañón", color: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/CarreteraAustral/CarreteraAustral202511.png", bw: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/CarreteraAustral/CarreteraAustral202511.png" },
+    { id: 12, name: "Atardecer", color: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/CarreteraAustral/CarreteraAustral202512.png", bw: "https://c4pit4nvodk4.github.io/KrennLuchaLibre/2025/CarreteraAustral/CarreteraAustral202512.png" }
+];
+
+        // Función para generar la galería
+        function generateGallery() {
+            const galleryGrid = document.getElementById('galleryGrid');
+            galleryGrid.innerHTML = '';
+            
+            galleryImages.forEach(image => {
+                const gridItem = document.createElement('div');
+                gridItem.className = 'grid-item';
+                
+                gridItem.innerHTML = `
+                    <div class="image-container bw">
+                        <img src="${image.bw}" alt="${image.name}">
+                    </div>
+                    <button onclick="activateImage(${image.id})">YA LA TENGO!</button>
+                `;
+                
+                galleryGrid.appendChild(gridItem);
+            });
+        }
+
+        // Función para activar la imagen (cambiar a color)
+        function activateImage(id) {
+            const image = galleryImages.find(img => img.id === id);
+            if (!image) return;
+            
+            const gridItems = document.querySelectorAll('.grid-item');
+            const gridItem = gridItems[id - 1];
+            
+            if (gridItem) {
+                const imageContainer = gridItem.querySelector('.image-container');
+                const button = gridItem.querySelector('button');
+                
+                // Cambiar a imagen en color
+                const imgElement = imageContainer.querySelector('img');
+                imgElement.src = image.color;
+                
+                // Quitar la clase de blanco y negro
+                imageContainer.classList.remove('bw');
+                
+                // Deshabilitar el botón y cambiar el texto
+                button.disabled = true;
+                button.textContent = 'OBTENIDA';
+            }
+        }
+
+        // Función para validar credenciales
+        function validateCredentials(username, password) {
+            return validCredentials.some(cred => 
+                cred.user === username && cred.password === password
+            );
+        }
+
+        // Evento de login
+        document.getElementById('loginBtn').addEventListener('click', function() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('errorMessage');
+            
+            if (validateCredentials(username, password)) {
+                // Credenciales válidas - redirigir a VideoPatagones.html
+                window.location.href = '/VideoPatagones.html';
+            } else {
+                // Credenciales inválidas - mostrar mensaje de error
+                errorMessage.style.display = 'block';
+                setTimeout(() => {
+                    // Redirigir a YouTube después de mostrar el mensaje
+                    window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+                }, 1500);
+            }
+        });
+
+        // Inicializar la galería al cargar la página
+        window.onload = generateGallery;
+    </script>
+            <footer>
+            <p>© 2025 Portal Multimedia Interactivo | Todos los derechos reservados</p>
+            <p>Diseñado con HTML5 y CSS3</p>
+            <p>Creado por Capitan Vodka</p>
+            <p>¿Quieres tu propio sistema de cartas coleccionables? +56982600659</p>
+        </footer>
+    <script type="text/javascript" src="https://contador.websiteout.com/js/7/0/0/0"></script>
+    
+</body>
+</html>
