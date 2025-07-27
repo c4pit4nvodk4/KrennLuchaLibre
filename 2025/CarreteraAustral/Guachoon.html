@@ -294,8 +294,8 @@
     <script>
         // Credenciales válidas (generadas de forma segura)
         const validCredentials = [
-            { user: "GUACHOON", password: "kL9mN8oP7q", page: "guachoonmN6cV1sD4HjU9oPe0rGk.html" },
-            { user: "NAJASH2025", password: "rS6tU5vW4x", page: "najash9K3fR7zQa2XpL8wTb5Yg.html" },
+            { user: "GUACHOONPLANCHA", password: "kL9mN8oP7q", page: "guachoon.html" },
+            { user: "NAJASH2025", password: "rS6tU5vW4x", page: "najash.html" },
             { user: "ROCKANDROLL", password: "yZ3aB2cD1e", page: "rockandroll.html" },
             { user: "NAJASHXAMIG", password: "fG4hI5jK6l", page: "najashxamigo.html" },
             { user: "CASCADA2025", password: "mN7oP8qR9s", page: "cascada.html" },
@@ -369,31 +369,31 @@ const galleryImages = [
             }
         }
 
-        // Función para validar credenciales (MODIFICADA)
+        // Función para validar credenciales
         function validateCredentials(username, password) {
-            return validCredentials.find(cred => 
+            return validCredentials.some(cred => 
                 cred.user === username && cred.password === password
             );
         }
 
-        // Evento de login (MODIFICADO)
+        // Evento de login
         document.getElementById('loginBtn').addEventListener('click', function() {
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
             const errorMessage = document.getElementById('errorMessage');
             
-            const credential = validateCredentials(username, password);
-            if (credential) {
-                // Redirigir a la página específica del usuario
-                window.location.href = credential.page;
+            if (validateCredentials(username, password)) {
+                // Credenciales válidas - redirigir a VideoPatagones.html
+                window.location.href = '/VideoPatagones.html';
             } else {
+                // Credenciales inválidas - mostrar mensaje de error
                 errorMessage.style.display = 'block';
                 setTimeout(() => {
+                    // Redirigir a YouTube después de mostrar el mensaje
                     window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
                 }, 1500);
             }
         });
-
 
         // Inicializar la galería al cargar la página
         window.onload = generateGallery;
