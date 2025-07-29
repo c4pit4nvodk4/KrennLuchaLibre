@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRENN LUCHA LIBRE - Tutorial</title>
+    <link href="https://c4pit4nvodk4.github.io/KrennLuchaLibre/KrennLogo.svg" rel="icon" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            line-height: 1.6;
+            padding: 20px;
+            background-image: radial-gradient(circle at center, #2a2a2a 0%, #1a1a1a 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #1e1e1e;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Portada */
+        .cover {
+            height: 70px;
+            background: linear-gradient(90deg, #9d0000, #d90000, #ff0000, #d90000, #9d0000);
+            background-size: 300% 300%;
+            animation: gradientAnimation 8s ease infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 3px solid #d4af37;
+        }
+        
+        .cover h1 {
+            color: white;
+            font-size: 32px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Separadores */
+        .separator {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
+            margin: 30px 0;
+        }
+        
+        /* Columnas */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 30px;
+        }
+        
+        .column {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .image-container {
+            border: 3px solid #d4af37;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            background: #2a2a2a;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .text-content {
+            padding: 20px;
+            background: #2a2a2a;
+            border-radius: 10px;
+            border-left: 5px solid #d90000;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .text-content h2 {
+            color: #d4af37;
+            margin-bottom: 15px;
+            font-size: 24px;
+            border-bottom: 2px solid #d90000;
+            padding-bottom: 8px;
+        }
+        
+        .text-content p {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .highlight {
+            color: #d4af37;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        /* Sección final */
+        .final-section {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(90deg, #1e1e1e, #2a0a0a, #1e1e1e);
+            margin: 20px;
+            border-radius: 10px;
+            border: 2px solid #d4af37;
+        }
+        
+        .final-section h2 {
+            font-size: 32px;
+            color: #d4af37;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        .final-section p {
+            font-size: 24px;
+            max-width: 800px;
+            margin: 0 auto;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .row {
+                flex-direction: column;
+            }
+            
+            .cover h1 {
+                font-size: 24px;
+            }
+            
+            .text-content {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Portada -->
+        <div class="cover">
+            <h1>KRENN LUCHA LIBRE</h1>
+        </div>
+        
+        <!-- Separador 1 -->
+        <div class="separator"></div>
+        
+        <!-- Primera sección de dos columnas -->
+        <div class="row">
+            <div class="column">
+                <div class="image-container">
+                    <img src="https://c4pit4nvodk4.github.io/KrennLuchaLibre/CartaFullDemo.gif" alt="Animación de tarjeta coleccionable">
+                </div>
+            </div>
+            <div class="column">
+                <div class="text-content">
+                    <h2>¡Desbloquea el Mundo de KRENN!</h2>
+                    <p>Estimado fanático de la lucha libre, ¡tu aventura comienza ahora! En el reverso de tu tarjeta coleccionable exclusiva de <span class="highlight">KRENN LUCHA LIBRE</span>, encontrarás un código especial y un código QR.</p>
+                    <p>Para acceder al contenido exclusivo:</p>
+                    <p>1. Toma tu teléfono móvil y abre la aplicación de cámara o un lector de códigos QR.</p>
+                    <p>2. Escanea el código QR que aparece en el reverso de tu tarjeta.</p>
+                    <p>3. Serás dirigido automáticamente a la página principal de <span class="highlight">KRENN LUCHA LIBRE</span>.</p>
+                    <p>¡Así de simple! Estás a un escaneo de distancia de contenido exclusivo y batallas épicas.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Separador 2 -->
+        <div class="separator"></div>
+        
+        <!-- Segunda sección de dos columnas -->
+        <div class="row">
+            <div class="column">
+                <div class="text-content">
+                    <h2>Encuentra tu Evento</h2>
+                    <p>Ahora que estás en la página principal de <span class="highlight">KRENN LUCHA LIBRE</span>, es momento de encontrar tu evento específico.</p>
+                    <p>1. Mira nuevamente el reverso de tu tarjeta coleccionable.</p>
+                    <p>2. Desplázate hacia abajo en nuestra página web hasta la sección de eventos.</p>
+                    <p>3. Busca cuidadosamente el logo del evento que coincide con el que aparece en tu tarjeta.</p>
+                    <p>Como se muestra en la animación de la tarjeta, si tu tarjeta pertenece a la sección de <span class="highlight">"Carretera Austral 2025"</span>, entonces deberás acceder a esa sección específica en nuestro sitio web.</p>
+                    <p>Cada evento tiene su propia magia, ¡asegúrate de seleccionar el correcto para tu tarjeta!</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1618336753974-aae8e04506aa?q=80&w=1000" alt="Tutorial 2 - Eventos" style="object-fit: cover; height: 100%;">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Separador 3 -->
+        <div class="separator"></div>
+        
+        <!-- Tercera sección de dos columnas -->
+        <div class="row">
+            <div class="column">
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?q=80&w=1000" alt="Tutorial 3 - Acceso" style="object-fit: cover; height: 100%;">
+                </div>
+            </div>
+            <div class="column">
+                <div class="text-content">
+                    <h2>Acceso Exclusivo</h2>
+                    <p>¡Estás a un paso de contenido exclusivo! En la sección de tu evento:</p>
+                    <p>1. Localiza el área de inicio de sesión.</p>
+                    <p>2. Introduce el <span class="highlight">usuario y contraseña</span> que se encuentran al reverso de tu tarjeta.</p>
+                    <p>3. ¡Accede a un mundo de grabaciones exclusivas de alta calidad!</p>
+                    <p>Cada tarjeta desbloquea un reproductor único con las mejores batallas de los luchadores de <span class="highlight">KRENN LUCHA LIBRE</span>. Disfruta de ángulos de cámara exclusivos, momentos tras bambalinas y contenido que solo los poseedores de tarjetas pueden ver.</p>
+                    <p><span class="highlight">¡ADVERTENCIA IMPORTANTE!</span> NO COMPARTAS TU CONTRASEÑA CON NADIE. Es de carácter único y exclusivo para el poseedor de la tarjeta. Cada contraseña solo puede ser utilizada por un usuario a la vez.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Separador 4 -->
+        <div class="separator"></div>
+        
+        <!-- Sección final -->
+        <div class="final-section">
+            <h2>¡Colecciona Todas las Tarjetas!</h2>
+            <p>Cada evento de KRENN LUCHA LIBRE tiene una colección exclusiva de 12 tarjetas. ¡Colecciónalas todas, desbloquea todo el contenido exclusivo y conviértete en el máximo fan de KRENN LUCHA LIBRE!</p>
+        </div>
+                <div class="separador"></div>        
+        <footer>
+            <p>© 2025 Portal Multimedia Interactivo | Todos los derechos reservados</p>
+            <p>Diseñado con HTML5 y CSS3</p>
+            <p>Creado por Capitan Vodka</p>
+            <p>¿Quieres tu propio sistema de cartas coleccionables? +56982600659</p>
+            <div style="text-align: center;">
+    <script type="text/javascript" src="https://contador.websiteout.com/js/7/0/0/0"></script>
+</div>
+    </div>
+    
+</body>
+</html>
