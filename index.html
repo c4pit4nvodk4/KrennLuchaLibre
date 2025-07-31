@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krenn Lucha Libre</title>
-      <link href="https://c4pit4nvodk4.github.io/KrennLuchaLibre/KrennLogo.svg" rel="icon" />
+    <link href="https://c4pit4nvodk4.github.io/KrennLuchaLibre/KrennLogo.svg" rel="icon" />
     <style>
         * {
             margin: 0;
@@ -190,27 +190,6 @@
                 font-size: 1.8rem;
             }
         }
-                * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 1200px;
-            width: 100%;
-            text-align: center;
-        }
         
         .title {
             color: white;
@@ -278,9 +257,9 @@
         }
         
         .button:hover {
+            background: #ff0000;
             transform: translateY(-5px);
             box-shadow: 0 8px 0 #8a0000, 0 12px 20px rgba(0,0,0,0.6);
-            background-color: #ff0000;
         }
         
         .button:hover::before {
@@ -292,67 +271,132 @@
             box-shadow: 0 2px 0 #8a0000;
         }
         
-        .button i {
-            margin-right: 10px;
-            font-size: 1.4rem;
+        /* Estilos para la cuenta regresiva */
+        .countdown-section {
+            text-align: center;
+            padding: 30px 0;
+            margin: 20px 0;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 2px solid rgba(255, 0, 0, 0.4);
         }
         
-        /* Estilos responsivos */
-        @media (max-width: 1024px) {
-            .button-container {
-                gap: 15px;
-            }
-            
-            .button {
-                min-width: 180px;
-                font-size: 1rem;
-                padding: 14px 20px;
-            }
+        .countdown-title {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffcc00;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
         }
         
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 30px auto;
+            max-width: 800px;
+        }
+        
+        .countdown-item {
+            min-width: 120px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255, 0, 0, 0.3);
+        }
+        
+        .countdown-value {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #ffffff;
+            text-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+        }
+        
+        .countdown-label {
+            font-size: 1.2rem;
+            color: #ffcc00;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 8px;
+        }
+        
+        .event-poster {
+            max-width: 90%;
+            max-height: 500px;
+            border-radius: 10px;
+            margin: 30px auto;
+            display: block;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            border: 3px solid rgba(255, 0, 0, 0.6);
+        }
+        
+        .ticket-button {
+            display: inline-block;
+            background: linear-gradient(to bottom, #ff0000, #b30000);
+            color: white;
+            padding: 18px 40px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            border-radius: 50px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 20px 0 30px;
+            box-shadow: 0 6px 0 #8a0000, 0 8px 20px rgba(0,0,0,0.6);
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .ticket-button:hover {
+            transform: translateY(-5px);
+            background: linear-gradient(to bottom, #ff3333, #cc0000);
+            box-shadow: 0 8px 0 #8a0000, 0 12px 25px rgba(0,0,0,0.8);
+        }
+        
+        .ticket-button:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 #8a0000;
+        }
+        
+        /* Estilos responsivos para la cuenta regresiva */
         @media (max-width: 768px) {
-            .title h1 {
-                font-size: 2.8rem;
+            .countdown-item {
+                min-width: 90px;
+                padding: 15px;
             }
             
-            .button-container {
-                gap: 12px;
+            .countdown-value {
+                font-size: 2.5rem;
             }
             
-            .button {
-                min-width: 160px;
-                padding: 12px 18px;
-                font-size: 0.95rem;
+            .ticket-button {
+                padding: 15px 30px;
+                font-size: 1.3rem;
             }
         }
         
         @media (max-width: 480px) {
-            .title h1 {
-                font-size: 2.3rem;
+            .countdown-item {
+                min-width: 70px;
+                padding: 12px;
             }
             
-            .title p {
+            .countdown-value {
+                font-size: 2rem;
+            }
+            
+            .countdown-label {
                 font-size: 1rem;
             }
             
-            .button-container {
-                flex-direction: column;
-                gap: 15px;
-                align-items: center;
+            .ticket-button {
+                padding: 12px 25px;
+                font-size: 1.1rem;
             }
-            
-            .button {
-                width: 100%;
-                max-width: 300px;
-                min-width: auto;
-            }
-        }
-        
-        .credits {
-            color: white;
-            margin-top: 40px;
-            font-size: 0.9rem;
-            opacity: 0.8;
         }
     </style>
 </head>
@@ -367,38 +411,94 @@
 
         <img src="https://c4pit4nvodk4.github.io/KrennLuchaLibre/Banner1.png" alt="Banner 1" style="width: 100%; max-width: 1200px; height: auto; display: block; margin: auto;">
         
-<img src="https://c4pit4nvodk4.github.io/KrennLuchaLibre/Banner2.png" alt="Banner 2" style="width: 100%; max-width: 1200px; height: auto; display: block; margin: auto;">
-        
-        <div class="separador"></div>
 
-                <div class="button-container">
+<!-- Reemplazo de la imagen por el video con overlay -->
+<div style="position: relative; width: 100%; max-width: 1200px; height: auto; display: block; margin: auto;">
+    <!-- Video de fondo -->
+    <video autoplay loop muted playsinline 
+           style="width: 100%; height: auto; display: block; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.4);">
+        <source src="https://c4pit4nvodk4.github.io/KrennLuchaLibre/Banner2.Webm" type="video/webm">
+        <!-- Fallback para navegadores que no soportan video -->
+        <img src="https://c4pit4nvodk4.github.io/KrennLuchaLibre/Banner2.png" alt="Banner 2">
+    </video>
+    
+    <!-- Overlay con logo y texto -->
+    <div style="position: absolute; bottom: 20px; left: 20px; display: flex; align-items: center; gap: 15px;">
+        <!-- Logo -->
+        <img src="https://c4pit4nvodk4.github.io/KrennLuchaLibre/KrennLogo.svg" alt="Logo Krenn" 
+             style="width: 80px; height: auto; filter: drop-shadow(0 0 8px rgba(0,0,0,0.8));">
+        
+        <!-- Texto -->
+        <div style="color: white; font-weight: 900; font-size: 1.8rem; text-shadow: 
+                   0 0 10px rgba(0,0,0,0.8), 
+                   0 0 20px rgba(0,0,0,0.6),
+                   3px 3px 5px rgba(0,0,0,0.8);">
+            Krenn Lucha Libre, Lucha Libre al fin del mundo!
+        </div>
+    </div>
+</div>
+
+<div class="separador"></div>
+        
+        <div class="button-container">
             <a href="https://c4pit4nvodk4.github.io/KrennLuchaLibre/Luchadores.html" class="button">
-                <i class="fas fa-mask"></i> Luchadores
+                Luchadores
             </a>
             
             <a href="https://c4pit4nvodk4.github.io/KrennLuchaLibre/Tutorial.html" class="button">
-                <i class="fas fa-book-open"></i> Cómo Funciona
+                Cómo Funciona
             </a>
 
-            <a href="https://c4pit4nvodk4.github.io/KrennLuchaLibre/Tienda.html" class="button">
-                <i class="fas fa-book-open"></i> Tienda
+            <a href="https://c4pit4nvodk4.github.io/KrennLuchaLibre/Tienda/Tienda.html" class="button">
+                Tienda
             </a>
             
             <a href="https://www.facebook.com/krenn.lucha.libre/?locale=es_LA" class="button">
-                <i class="fab fa-facebook"></i> Facebook
+                Facebook
             </a>
             
             <a href="https://www.instagram.com/krenn.lucha.libre/?hl=es-la" class="button">
-                <i class="fab fa-instagram"></i> Instagram
+                Instagram
             </a>
             
             <a href="https://www.tiktok.com/@krennluchalibre?lang=es" class="button">
-                <i class="fab fa-tiktok"></i> Tiktok
+                Tiktok
             </a>
         </div>
 
         <div class="separador"></div>
-        
+
+        <!-- DeepSeek nececito que agregues el reloj en cuenta regresiva aqui -->
+        <div class="countdown-section">
+            <h2 class="countdown-title">PROXIMO EVENTO</h2>
+            
+            <div class="countdown-container">
+                <div class="countdown-item">
+                    <div class="countdown-value" id="days">00</div>
+                    <div class="countdown-label">Días</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="hours">00</div>
+                    <div class="countdown-label">Horas</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="minutes">00</div>
+                    <div class="countdown-label">Minutos</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="seconds">00</div>
+                    <div class="countdown-label">Segundos</div>
+                </div>
+            </div>
+            
+            <img src="https://c4pit4nvodk4.github.io/KrennLuchaLibre/ProximoEvento.Webp" alt="Afiche del próximo evento" class="event-poster">
+            
+            <a href="https://c4pit4nvodk4.github.io/KrennLuchaLibre/tikets.html" class="ticket-button">COMPRA TUS ENTRADAS AQUI!</a>
+        </div>
+        <!-- Fin del bloque de cuenta regresiva -->
+
+        <div class="separador"></div>
+
         <h2 class="grid-title">Selecciona tu Coleccion</h2>
         
         <div class="grid-container">
@@ -428,7 +528,10 @@
     <div class="button-text">Haruwen 2025</div>
 </a>
         </div>
-        <div class="separador"></div>        
+        <div class="separador"></div>
+        
+        <h2 class="grid-title">Colaboradores y Amigos</h2>  
+              
         <footer>
             <p>© 2025 Portal Multimedia Interactivo | Todos los derechos reservados</p>
             <p>Diseñado con HTML5 y CSS3</p>
@@ -439,5 +542,36 @@
 </div>
         </footer>
     </div>
+    
+    <script>
+        // Fecha del evento (editar aquí)
+        const eventDate = new Date(2024, 11, 31, 20, 0, 0); // 31 de Diciembre 2024, 20:00
+        
+        function updateCountdown() {
+            const now = new Date();
+            const diff = eventDate - now;
+            
+            if (diff <= 0) {
+                document.getElementById('days').textContent = '00';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+                return;
+            }
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
 </body>
 </html>
